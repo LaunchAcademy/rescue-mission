@@ -1,0 +1,11 @@
+<p>
+  Modify me in `app/views/homes/index.html.erb` or change the root directive in
+  `config/routes.rb`
+</p>
+<h1>Questions</h1>
+
+<ul>
+  <% @questions.each do |q|%>
+    <li><%=link_to q.title%></li>
+  <%end%>
+</ul>

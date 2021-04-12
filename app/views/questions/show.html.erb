@@ -1,0 +1,19 @@
+
+  <h1><%=@question.title%></h1>
+  <p><%=@question.description%></p>
+
+
+<h1>Answer Form </h1>
+  <%= form_for([@question, @answer]) do |f| %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+    <%= f.submit %>
+<% end %>
+
+<h1>Answers</h1>
+  <ul>
+    <%@answers.each do |answer|%>
+      <li><%=link_to(answer.description, answer_path(answer))%></li>
+    <%end%>
+  </ul>
